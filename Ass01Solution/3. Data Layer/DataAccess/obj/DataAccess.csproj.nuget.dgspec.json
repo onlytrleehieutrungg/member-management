@@ -1,0 +1,116 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/trungtran/RiderProjects/Assignment PRN211/Ass01Solution/3. Data Layer/DataAccess/DataAccess.csproj": {}
+  },
+  "projects": {
+    "/Users/trungtran/RiderProjects/Assignment PRN211/Ass01Solution/2. Business Layer/BusinessObject/BusinessObject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/trungtran/RiderProjects/Assignment PRN211/Ass01Solution/2. Business Layer/BusinessObject/BusinessObject.csproj",
+        "projectName": "BusinessObject",
+        "projectPath": "/Users/trungtran/RiderProjects/Assignment PRN211/Ass01Solution/2. Business Layer/BusinessObject/BusinessObject.csproj",
+        "packagesPath": "/Users/trungtran/.nuget/packages/",
+        "outputPath": "/Users/trungtran/RiderProjects/Assignment PRN211/Ass01Solution/2. Business Layer/BusinessObject/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/trungtran/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.105/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/trungtran/RiderProjects/Assignment PRN211/Ass01Solution/3. Data Layer/DataAccess/DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/trungtran/RiderProjects/Assignment PRN211/Ass01Solution/3. Data Layer/DataAccess/DataAccess.csproj",
+        "projectName": "DataAccess",
+        "projectPath": "/Users/trungtran/RiderProjects/Assignment PRN211/Ass01Solution/3. Data Layer/DataAccess/DataAccess.csproj",
+        "packagesPath": "/Users/trungtran/.nuget/packages/",
+        "outputPath": "/Users/trungtran/RiderProjects/Assignment PRN211/Ass01Solution/3. Data Layer/DataAccess/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/trungtran/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/Users/trungtran/RiderProjects/Assignment PRN211/Ass01Solution/2. Business Layer/BusinessObject/BusinessObject.csproj": {
+                "projectPath": "/Users/trungtran/RiderProjects/Assignment PRN211/Ass01Solution/2. Business Layer/BusinessObject/BusinessObject.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.105/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

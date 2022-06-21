@@ -1,0 +1,88 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "BusinessObject/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/BusinessObject.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessObject.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BusinessObject/1.0.0": {
+      "type": "project",
+      "path": "../../2. Business Layer/BusinessObject/BusinessObject.csproj",
+      "msbuildProject": "../../2. Business Layer/BusinessObject/BusinessObject.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "BusinessObject >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/trungtran/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/trungtran/RiderProjects/Assignment PRN211/Ass01Solution/3. Data Layer/DataAccess/DataAccess.csproj",
+      "projectName": "DataAccess",
+      "projectPath": "/Users/trungtran/RiderProjects/Assignment PRN211/Ass01Solution/3. Data Layer/DataAccess/DataAccess.csproj",
+      "packagesPath": "/Users/trungtran/.nuget/packages/",
+      "outputPath": "/Users/trungtran/RiderProjects/Assignment PRN211/Ass01Solution/3. Data Layer/DataAccess/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/trungtran/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "/Users/trungtran/RiderProjects/Assignment PRN211/Ass01Solution/2. Business Layer/BusinessObject/BusinessObject.csproj": {
+              "projectPath": "/Users/trungtran/RiderProjects/Assignment PRN211/Ass01Solution/2. Business Layer/BusinessObject/BusinessObject.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.105/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
