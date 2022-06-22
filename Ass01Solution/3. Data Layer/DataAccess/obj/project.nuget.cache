@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J/kAoCpFjGO69Z2KyghrDRJChTxC4JdYd9sJTT+m+NtYAUKG3n4dyNvCNIlQrzwLei+KLdG4wcPT1+P5jdfw8Q==",
+  "dgSpecHash": "FwCnlpzFLdCCpxdSjsvDiit7SqzcqV0FITsz44xeNAo2C+zTvCO7u9ZJRu10JsjLb8Bw6wG1bg5YmTlXwP1ugw==",
   "success": true,
-  "projectFilePath": "/Users/trungtran/RiderProjects/Assignment PRN211/Ass01Solution/3. Data Layer/DataAccess/DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\3. Data Layer\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

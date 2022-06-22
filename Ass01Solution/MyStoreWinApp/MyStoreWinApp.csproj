@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\2. Business Layer\BusinessObject\BusinessObject.csproj" />
+    <ProjectReference Include="..\3. Data Layer\DataAccess\DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>

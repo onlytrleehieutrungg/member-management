@@ -1,8 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObject", "2. Business Layer\BusinessObject\BusinessObject.csproj", "{F0C0AC47-1ACD-4F14-898B-5EB75AA2D20D}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessObject", "2. Business Layer\BusinessObject\BusinessObject.csproj", "{F0C0AC47-1ACD-4F14-898B-5EB75AA2D20D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "3. Data Layer\DataAccess\DataAccess.csproj", "{1DE57A83-35BA-477F-B51B-6DCCB5E70681}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "3. Data Layer\DataAccess\DataAccess.csproj", "{1DE57A83-35BA-477F-B51B-6DCCB5E70681}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyStoreWinApp", "MyStoreWinApp\MyStoreWinApp.csproj", "{8D39C79E-743F-494C-8E5B-7B20DB1CBBF9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +23,15 @@ Global
 		{1DE57A83-35BA-477F-B51B-6DCCB5E70681}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DE57A83-35BA-477F-B51B-6DCCB5E70681}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DE57A83-35BA-477F-B51B-6DCCB5E70681}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D39C79E-743F-494C-8E5B-7B20DB1CBBF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D39C79E-743F-494C-8E5B-7B20DB1CBBF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D39C79E-743F-494C-8E5B-7B20DB1CBBF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D39C79E-743F-494C-8E5B-7B20DB1CBBF9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2DB3AFEA-2FFF-44CB-8722-877850BB7727}
 	EndGlobalSection
 EndGlobal

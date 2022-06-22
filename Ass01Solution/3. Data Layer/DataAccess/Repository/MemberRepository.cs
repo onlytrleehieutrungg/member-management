@@ -7,11 +7,11 @@ namespace DataAccess.Repository
     {
         public IEnumerable<Member> GetMemebers() => MemberDAO.Instance.GetMembers;
 
-        public Member GetMemberById(int memberId) => MemberDAO.Instance.GetMemberById(memberId);
+        public Member GetMemberById(string memberId) => MemberDAO.Instance.GetMemberById(memberId);
 
         public void AddMember(Member member) => MemberDAO.Instance.AddNewMember(member);
 
-        public void DeleteMember(int memberId) => MemberDAO.Instance.RemoveMember(memberId);
+        public void DeleteMember(string memberId) => MemberDAO.Instance.RemoveMember(memberId);
 
         public void UpdateMember(Member member) => MemberDAO.Instance.UpdateNewMember(member);
     }

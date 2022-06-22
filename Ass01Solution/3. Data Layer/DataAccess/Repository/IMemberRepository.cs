@@ -6,9 +6,9 @@ namespace DataAccess.Repository
     public interface IMemberRepository
     {
         public IEnumerable<Member> GetMemebers();
-        Member GetMemberById(int memberId);
+        Member GetMemberById(string memberId);
         void AddMember(Member member);
-        void DeleteMember(int memberId);
+        void DeleteMember(string memberId);
         void UpdateMember(Member member);
     }
 }

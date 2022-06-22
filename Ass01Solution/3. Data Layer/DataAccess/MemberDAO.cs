@@ -11,7 +11,7 @@ namespace DataAccess
         {
             new Member
             {
-                MemberId = 1, MemberName = "Trung", Email = "trungtran2k01", 
+                MemberId = "1", MemberName = "Trung", Email = "trungtran2k01", 
                 Password = "123123", City = "SG", Country = "QN"
             }
         };
@@ -40,9 +40,9 @@ namespace DataAccess
 
         public List<Member> GetMembers => MemberList;
 
-        public Member GetMemberById(int memberId)
+        public Member GetMemberById(string memberId)
         {
-            Member member = MemberList.SingleOrDefault(mem => mem.MemberId == memberId);
+            Member member = MemberList.SingleOrDefault(mem => mem.MemberId.Equals(memberId));
             return member;
         }
 
@@ -74,7 +74,7 @@ namespace DataAccess
             }
         }
 
-        public void RemoveMember(int memberId)
+        public void RemoveMember(string memberId)
         {
             Member member = GetMemberById(memberId);
             if (member!=null)
