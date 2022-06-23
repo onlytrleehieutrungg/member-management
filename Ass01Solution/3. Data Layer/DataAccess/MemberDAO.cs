@@ -1,20 +1,14 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using BusinessObject;
+using Microsoft.Data.SqlClient;
 
 namespace DataAccess
 {
-    public class MemberDAO
+    public class MemberDAO : BaseDAL
     {
-        private static List<Member> MemberList = new List<Member>()
-        {
-            new Member
-            {
-                MemberId = "1", MemberName = "Trung", Email = "trungtran2k01", 
-                Password = "123123", City = "SG", Country = "QN"
-            }
-        };
 
         private MemberDAO()
         {
@@ -38,51 +32,168 @@ namespace DataAccess
             }
         }
 
-        public List<Member> GetMembers => MemberList;
+        public IEnumerable<Member> GetMemberList()
+        {
+            IDataReader dataReader = null;
+            string SQLSelect = "Select MemberId, MemberName, Email, Password, City, Country from Member";
+            var members = new List<Member>();
+            try
+            {
+                dataReader = dataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection);
+                while (dataReader.Read())
+                {
+                    members.Add(new Member
+                    {
+                        MemberId = dataReader.GetString(0),
+                        MemberName = dataReader.GetString(1),
+                        Email = dataReader.GetString(2),
+                        Password = dataReader.GetString(3),
+                        City = dataReader.GetString(4),
+                        Country = dataReader.GetString(4)
+
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                dataReader.Close();
+                CloseConnection();
+            }
+            return members;
+        }
+
 
         public Member GetMemberById(string memberId)
         {
-            Member member = MemberList.SingleOrDefault(mem => mem.MemberId.Equals(memberId));
+            Member member = null;
+            IDataReader dataReader = null;
+            string SQLSelect = "Select MemberId, MemberName, Email, Password, City, Country "
+                            + " From Cars where MemberId = @MemberId";
+
+            try
+            {
+                var param = dataProvider.CreateParameter("@MemberId", 4, memberId, DbType.String);
+                dataReader = dataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection, param);
+                if (dataReader.Read())
+                {
+                    member = new Member
+                    {
+                        MemberId = dataReader.GetString(0),
+                        MemberName = dataReader.GetString(1),
+                        Email = dataReader.GetString(2),
+                        Password = dataReader.GetString(3),
+                        City = dataReader.GetString(4),
+                        Country = dataReader.GetString(4)
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                dataReader.Close();
+                CloseConnection();
+            }
             return member;
         }
 
-        public void AddNewMember(Member member)
+        public void AddNew(Member member)
         {
-            Member mem = GetMemberById(member.MemberId);
-            if (mem==null)
+            try
             {
-                MemberList.Add(mem);
-            }
-            else
-            {
-                throw new Exception("Member already exists.");
+                Member mem = GetMemberById(member.MemberId);
+                if (mem == null)
+                {
+                    string SQLInsert = "Insert Member values(@MemberId,@MemberName,@Email,@Password,@City,@Country)";
+                    var parameters = new List<SqlParameter>();
+                    parameters.Add(dataProvider.CreateParameter("@MemberId", 50, mem.MemberId, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@MemberName", 50, mem.MemberName, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@Email", 50, mem.Email, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@Password", 50, mem.Password, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@City", 50, mem.City, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@Country", 50, mem.Country, DbType.String));
 
+                    dataProvider.Insert(SQLInsert, CommandType.Text, parameters.ToArray());
+                }
+                else
+                {
+                    throw new Exception("The car does not already exist");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
             }
         }
         public void UpdateNewMember(Member member)
         {
-            Member mem = GetMemberById(member.MemberId);
-            if (mem!=null)
+            try
             {
-                var index = MemberList.IndexOf(mem);
-                MemberList[index] = mem;
-            }
-            else
-            {
-                throw new Exception("Member does not already exists.");
+                Member mem = GetMemberById(member.MemberId);
+                if (mem != null)
+                {
+                    string SQLInsert = "Update Member set MemberName = @MemberName,Email = @Email,Password = @Password,City = @City,Country = @Country where MemberId = @MemberId";
+                    var parameters = new List<SqlParameter>();
+                    parameters.Add(dataProvider.CreateParameter("@MemberId", 50, mem.MemberId, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@MemberName", 50, mem.MemberName, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@Email", 50, mem.Email, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@Password", 50, mem.Password, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@City", 50, mem.City, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@Country", 50, mem.Country, DbType.String));
 
+                    dataProvider.Insert(SQLInsert, CommandType.Text, parameters.ToArray());
+                }
+                else
+                {
+                    throw new Exception("The car does not already exist");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
             }
         }
 
         public void RemoveMember(string memberId)
         {
-            Member member = GetMemberById(memberId);
-            if (member!=null)
+            try
             {
-                MemberList.Remove(member);
-            }else{
-                throw new Exception("Member dose not already exists.");
+                Member member = GetMemberById(memberId);
+                if (member != null)
+                {
+
+                    string SQLDelete = "Delete Cars where MemberId = @MemberId";
+                    var param = dataProvider.CreateParameter("@MemberId", 50, memberId, DbType.String);
+                    dataProvider.Delete(SQLDelete, CommandType.Text, param);
+                }
+                else
+                {
+                    throw new Exception("Member dose not already exists.");
+                }
             }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
+
         }
     }
 }
