@@ -150,6 +150,7 @@ namespace MyStoreWinApp
             {
                 var member = GetMemberObject();
                 memberRepository.DeleteMember(member.MemberId);
+                MessageBox.Show("Delete Successfully", "Detele", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch(Exception ex)
             {

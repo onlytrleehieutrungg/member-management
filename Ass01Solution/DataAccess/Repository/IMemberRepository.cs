@@ -10,5 +10,9 @@ namespace DataAccess.Repository
         void AddMember(Member member);
         void DeleteMember(string memberId);
         void UpdateMember(Member member);
+
+        Member Login(string username, string password); 
+
+        public IEnumerable<Member> Search(string id);
     }
 }

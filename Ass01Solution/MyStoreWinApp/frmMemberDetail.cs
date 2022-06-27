@@ -57,10 +57,12 @@ namespace MyStoreWinApp
                 if (InsertOrUpdate == false)
                 {
                     MemberRepository.AddMember(member);
+                    MessageBox.Show("Add Successfully", "Add", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     MemberRepository.UpdateMember(member);
+                    MessageBox.Show("Update Successfully", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)

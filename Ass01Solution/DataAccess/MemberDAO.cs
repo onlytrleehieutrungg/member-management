@@ -195,5 +195,26 @@ namespace DataAccess
             }
 
         }
+
+
+        public Member Login(string email, string password)
+        {
+            IEnumerable<Member> members = GetMemberList();
+            Member member = members.SingleOrDefault(mb => mb.Email.Equals(email) && mb.Password.Equals(password));
+            return member;
+        }
+
+        public IEnumerable<Member> SearchMember(string id)
+        {
+            IEnumerable<Member> searchResult = null;
+            IEnumerable<Member> members = GetMemberList();
+
+            var memberSearch = from member in members
+                               where member.MemberId.Equals(id)
+                               select member;
+            searchResult = memberSearch;
+
+            return searchResult;
+        }
     }
 }
