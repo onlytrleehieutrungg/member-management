@@ -2604,13 +2604,13 @@
     },
     "BusinessObject/1.0.0": {
       "type": "project",
-      "path": "../2. Business Layer/BusinessObject/BusinessObject.csproj",
-      "msbuildProject": "../2. Business Layer/BusinessObject/BusinessObject.csproj"
+      "path": "../BusinessObject/BusinessObject.csproj",
+      "msbuildProject": "../BusinessObject/BusinessObject.csproj"
     },
     "DataAccess/1.0.0": {
       "type": "project",
-      "path": "../3. Data Layer/DataAccess/DataAccess.csproj",
-      "msbuildProject": "../3. Data Layer/DataAccess/DataAccess.csproj"
+      "path": "../DataAccess/DataAccess.csproj",
+      "msbuildProject": "../DataAccess/DataAccess.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2646,11 +2646,11 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\2. Business Layer\\BusinessObject\\BusinessObject.csproj": {
-              "projectPath": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\2. Business Layer\\BusinessObject\\BusinessObject.csproj"
+            "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\BusinessObject\\BusinessObject.csproj": {
+              "projectPath": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\BusinessObject\\BusinessObject.csproj"
             },
-            "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\3. Data Layer\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\3. Data Layer\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\DataAccess\\DataAccess.csproj"
             }
           }
         }

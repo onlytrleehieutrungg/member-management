@@ -4,14 +4,14 @@
     "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\MyStoreWinApp\\MyStoreWinApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\2. Business Layer\\BusinessObject\\BusinessObject.csproj": {
+    "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\2. Business Layer\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\2. Business Layer\\BusinessObject\\BusinessObject.csproj",
+        "projectPath": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\BusinessObject\\BusinessObject.csproj",
         "packagesPath": "C:\\Users\\lakho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\2. Business Layer\\BusinessObject\\obj\\",
+        "outputPath": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lakho\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -72,14 +72,14 @@
         }
       }
     },
-    "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\3. Data Layer\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\3. Data Layer\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\3. Data Layer\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\lakho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\3. Data Layer\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lakho\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -96,8 +96,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\2. Business Layer\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\2. Business Layer\\BusinessObject\\BusinessObject.csproj"
+              "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
@@ -168,11 +168,11 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\2. Business Layer\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\2. Business Layer\\BusinessObject\\BusinessObject.csproj"
+              "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\BusinessObject\\BusinessObject.csproj"
               },
-              "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\3. Data Layer\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\3. Data Layer\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\lakho\\source\\repos\\Winform_Trung\\member-management\\Ass01Solution\\DataAccess\\DataAccess.csproj"
               }
             }
           }
