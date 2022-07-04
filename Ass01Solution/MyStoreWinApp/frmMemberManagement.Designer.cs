@@ -31,20 +31,23 @@
             this.txtMemberId = new System.Windows.Forms.TextBox();
             this.txtMemberName = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtCity = new System.Windows.Forms.TextBox();
             this.txtCountry = new System.Windows.Forms.TextBox();
             this.dgvMemberList = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.abc = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +61,7 @@
             // 
             // txtMemberName
             // 
-            this.txtMemberName.Location = new System.Drawing.Point(137, 125);
+            this.txtMemberName.Location = new System.Drawing.Point(137, 94);
             this.txtMemberName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMemberName.Name = "txtMemberName";
             this.txtMemberName.Size = new System.Drawing.Size(114, 27);
@@ -66,23 +69,15 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(137, 225);
+            this.txtEmail.Location = new System.Drawing.Point(754, 33);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(114, 27);
             this.txtEmail.TabIndex = 2;
             // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(387, 33);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(114, 27);
-            this.txtPassword.TabIndex = 3;
-            // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(387, 125);
+            this.txtCity.Location = new System.Drawing.Point(456, 94);
             this.txtCity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(114, 27);
@@ -90,7 +85,7 @@
             // 
             // txtCountry
             // 
-            this.txtCountry.Location = new System.Drawing.Point(387, 225);
+            this.txtCountry.Location = new System.Drawing.Point(456, 33);
             this.txtCountry.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Size = new System.Drawing.Size(114, 27);
@@ -119,7 +114,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(62, 129);
+            this.label2.Location = new System.Drawing.Point(62, 97);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 20);
             this.label2.TabIndex = 8;
@@ -128,25 +123,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(62, 229);
+            this.label3.Location = new System.Drawing.Point(681, 36);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 20);
             this.label3.TabIndex = 9;
             this.label3.Text = "Email";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(315, 39);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 20);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Password";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(320, 132);
+            this.label5.Location = new System.Drawing.Point(372, 101);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 20);
             this.label5.TabIndex = 11;
@@ -155,7 +141,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(320, 236);
+            this.label6.Location = new System.Drawing.Point(372, 40);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 20);
             this.label6.TabIndex = 12;
@@ -190,8 +176,9 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(86, 31);
             this.btnClose.TabIndex = 16;
-            this.btnClose.Text = "Close";
+            this.btnClose.Text = "Logout";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnDelete
             // 
@@ -204,30 +191,80 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(137, 162);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(456, 162);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 29);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "Filter";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(754, 90);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(114, 27);
+            this.txtPassword.TabIndex = 20;
+            // 
+            // abc
+            // 
+            this.abc.AutoSize = true;
+            this.abc.Location = new System.Drawing.Point(681, 97);
+            this.abc.Name = "abc";
+            this.abc.Size = new System.Drawing.Size(70, 20);
+            this.abc.TabIndex = 21;
+            this.abc.Text = "Password";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(754, 162);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(105, 97);
+            this.button3.TabIndex = 22;
+            this.button3.Text = "Sort";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // frmMemberManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.abc);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvMemberList);
             this.Controls.Add(this.txtCountry);
             this.Controls.Add(this.txtCity);
-            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtMemberName);
             this.Controls.Add(this.txtMemberId);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMemberManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Member Management";
             this.Load += new System.EventHandler(this.frmMemberManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).EndInit();
@@ -241,19 +278,22 @@
         private System.Windows.Forms.TextBox txtMemberId;
         private System.Windows.Forms.TextBox txtMemberName;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.TextBox txtCountry;
         private System.Windows.Forms.DataGridView dgvMemberList;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label abc;
+        private System.Windows.Forms.Button button3;
     }
 }

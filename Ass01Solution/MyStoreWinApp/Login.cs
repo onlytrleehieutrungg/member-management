@@ -21,35 +21,21 @@ namespace MyStoreWinApp
         IMemberRepository memberRepository = new MemberRepository();
         private void Login_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             try
             {
-                string Email = txtEmail.Text;
-                string Password = txtPassword.Text;
-                Member member = memberRepository.Login(Email, Password);
-                if (Email.Equals("admin@fstore.com") && Password.Equals("admin@@"))
+                IMemberRepository memberRepository = new MemberRepository();
+                Member member = memberRepository.GetMemebers().SingleOrDefault(pro => pro.Email == txtEmail.Text && pro.Password == txtPassword.Text);
+                if (member != null)
                 {
-                    frmMemberManagement memberManagement = new frmMemberManagement();
+                    frmMemberManagement memberManagement = new frmMemberManagement(member);
                     memberManagement.Show();
                 }
-                else if (member != null)
-                {
-                    MessageBox.Show("Login successfully", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    frmMemberDetail frmMemberDetails = new frmMemberDetail
-                    {
-                        Text = "update Member",
-                        MemberInfo = member,
-                        InsertOrUpdate = true,
-                        MemberRepository = memberRepository
 
-
-                    };
-                    frmMemberDetails.Show();
-                }
                 else
                 {
                     if (MessageBox.Show("Login failed!!", "Login", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Cancel)

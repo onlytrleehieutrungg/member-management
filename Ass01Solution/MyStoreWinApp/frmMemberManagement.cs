@@ -21,6 +21,28 @@ namespace MyStoreWinApp
 
         IMemberRepository memberRepository = new MemberRepository();
         BindingSource source;
+        Member memberLogin;
+
+        public frmMemberManagement(Member member)
+        {
+            InitializeComponent();
+            this.memberLogin = member;
+            List<Member> members = new List<Member>();
+            if (member.MemberName == "admin@fstore.com")
+            {
+                button1.Enabled = true;
+
+            }
+            else
+            {
+                button1.Enabled = false;
+                btnDelete.Enabled = false;
+                btnNew.Enabled = false;
+                button2.Enabled = false;
+                button3.Enabled = false;
+
+            }
+        }
         private void frmMemberManagement_Load(object sender, EventArgs e)
         {
             btnDelete.Enabled = false;
@@ -48,7 +70,7 @@ namespace MyStoreWinApp
             txtMemberId.Text = string.Empty;
             txtMemberName.Text = string.Empty;
             txtEmail.Text = string.Empty;
-            txtPassword.Text = string.Empty;
+  
             txtCity.Text = string.Empty;
             txtCountry.Text = string.Empty;
 
@@ -62,12 +84,8 @@ namespace MyStoreWinApp
                 source = new BindingSource();
                 source.DataSource = members;
 
-                txtMemberId.DataBindings.Clear();
-                txtMemberName.DataBindings.Clear();
-                txtEmail.DataBindings.Clear();
-                txtPassword.DataBindings.Clear();
-                txtCity.DataBindings.Clear();
-                txtCountry.DataBindings.Clear();
+              
+
 
 
                 txtMemberId.DataBindings.Add("Text", source, "MemberId");
@@ -76,6 +94,12 @@ namespace MyStoreWinApp
                 txtPassword.DataBindings.Add("Text", source, "Password");
                 txtCity.DataBindings.Add("Text", source, "City");
                 txtCountry.DataBindings.Add("Text", source, "Country");
+                txtMemberId.DataBindings.Clear();
+                txtMemberName.DataBindings.Clear();
+                txtEmail.DataBindings.Clear();
+                abc.DataBindings.Clear();
+                txtCity.DataBindings.Clear();
+                txtCountry.DataBindings.Clear();
 
 
                 dgvMemberList.DataSource = null;
@@ -106,7 +130,7 @@ namespace MyStoreWinApp
                     MemberId = txtMemberId.Text,
                     MemberName = txtMemberId.Text,
                     Email = txtEmail.Text,
-                    Password = txtPassword.Text,
+                    Password = abc.Text,
                     City = txtCity.Text,
                     Country = txtCountry.Text,
                 };
@@ -157,5 +181,72 @@ namespace MyStoreWinApp
                 MessageBox.Show(ex.Message, "Delete a Member");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (txtMemberId.Text.Equals("") || txtMemberName.Text.Equals(""))
+            {
+                MessageBox.Show("Missing input !", "Error");
+            }
+            else
+            {
+                List<Member> list = (List<Member>)memberRepository.GetMemebers();
+                list = list.Where(pro => pro.MemberId.ToString().Contains(txtMemberId.Text) && pro.MemberName.ToString().Contains(txtMemberName.Text)).ToList();
+                try
+                {
+                    source = new BindingSource();
+                    source.DataSource = list;
+                    dgvMemberList.DataSource = null;
+                    dgvMemberList.DataSource = source;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Search Member");
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (txtCity.Text.Equals("") || txtCountry.Text.Equals(""))
+            {
+                MessageBox.Show("Missing input !", "Error");
+            }
+            else
+            {
+                List<Member> list = (List<Member>)memberRepository.GetMemebers();
+                list = list.Where(pro => pro.City.Contains(txtCity.Text) && pro.Country.Contains(txtCountry.Text)).ToList();
+                try
+                {
+                    source = new BindingSource();
+                    source.DataSource = list;
+                    dgvMemberList.DataSource = null;
+                    dgvMemberList.DataSource = source;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Filter Member");
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            List<Member> list = (List<Member>)memberRepository.GetMemebers();
+            list = list.OrderByDescending(pro => pro.MemberName).ToList();
+            try
+            {
+                source = new BindingSource();
+                source.DataSource = list;
+                dgvMemberList.DataSource = null;
+                dgvMemberList.DataSource = source;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Sort Member");
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e) => Close();
     }
 }
